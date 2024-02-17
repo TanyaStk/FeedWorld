@@ -2,8 +2,6 @@
 //  FeedWorldApp.swift
 //  FeedWorld
 //
-//  Created by Tanya Samastroyenka on 12.02.2024.
-//
 
 import SwiftUI
 
@@ -11,7 +9,44 @@ import SwiftUI
 struct FeedWorldApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView()
         }
+    }
+}
+
+
+extension UIApplication {
+    var keyWindow: UIWindow? {
+        connectedScenes
+            .compactMap {
+                $0 as? UIWindowScene
+            }
+            .flatMap {
+                $0.windows
+            }
+            .first {
+                $0.isKeyWindow
+            }
+    }
+    
+}
+
+private struct SafeAreaInsetsKey: EnvironmentKey {
+    static var defaultValue: EdgeInsets {
+        UIApplication.shared.keyWindow?.safeAreaInsets.swiftUiInsets ?? EdgeInsets()
+    }
+}
+
+
+private extension UIEdgeInsets {
+    var swiftUiInsets: EdgeInsets {
+        EdgeInsets(top: top, leading: left, bottom: bottom, trailing: right)
+    }
+}
+
+
+extension EnvironmentValues {
+    var safeAreaInsets: EdgeInsets {
+        self[SafeAreaInsetsKey.self]
     }
 }

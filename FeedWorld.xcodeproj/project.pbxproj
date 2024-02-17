@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A3874602B813CB500F63F15 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38745F2B813CB500F63F15 /* DataManager.swift */; };
+		5A6E14852B79945600C7EE24 /* FeedCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A6E14842B79945600C7EE24 /* FeedCellView.swift */; };
 		5AC5453B2B7974DB00908AD0 /* FeedWorldApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5453A2B7974DB00908AD0 /* FeedWorldApp.swift */; };
-		5AC5453D2B7974DB00908AD0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5453C2B7974DB00908AD0 /* ContentView.swift */; };
+		5AC5453D2B7974DB00908AD0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5453C2B7974DB00908AD0 /* MainTabView.swift */; };
 		5AC5453F2B7974DC00908AD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AC5453E2B7974DC00908AD0 /* Assets.xcassets */; };
 		5AC545422B7974DC00908AD0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AC545412B7974DC00908AD0 /* Preview Assets.xcassets */; };
+		5AC5454B2B79766C00908AD0 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5454A2B79766C00908AD0 /* FeedView.swift */; };
+		5AC5454D2B79768300908AD0 /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC5454C2B79768300908AD0 /* FavouritesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A38745F2B813CB500F63F15 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5A6E14842B79945600C7EE24 /* FeedCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCellView.swift; sourceTree = "<group>"; };
 		5AC545372B7974DB00908AD0 /* FeedWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC5453A2B7974DB00908AD0 /* FeedWorldApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedWorldApp.swift; sourceTree = "<group>"; };
-		5AC5453C2B7974DB00908AD0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5AC5453C2B7974DB00908AD0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		5AC5453E2B7974DC00908AD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AC545412B7974DC00908AD0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5AC5454A2B79766C00908AD0 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		5AC5454C2B79768300908AD0 /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,11 @@
 		5AC545392B7974DB00908AD0 /* FeedWorld */ = {
 			isa = PBXGroup;
 			children = (
+				5A38745F2B813CB500F63F15 /* DataManager.swift */,
+				5AC545492B79765800908AD0 /* Favorites */,
+				5AC545482B79764E00908AD0 /* Feed */,
 				5AC5453A2B7974DB00908AD0 /* FeedWorldApp.swift */,
-				5AC5453C2B7974DB00908AD0 /* ContentView.swift */,
+				5AC5453C2B7974DB00908AD0 /* MainTabView.swift */,
 				5AC5453E2B7974DC00908AD0 /* Assets.xcassets */,
 				5AC545402B7974DC00908AD0 /* Preview Content */,
 			);
@@ -65,6 +76,23 @@
 				5AC545412B7974DC00908AD0 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5AC545482B79764E00908AD0 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				5AC5454A2B79766C00908AD0 /* FeedView.swift */,
+				5A6E14842B79945600C7EE24 /* FeedCellView.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		5AC545492B79765800908AD0 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				5AC5454C2B79768300908AD0 /* FavouritesView.swift */,
+			);
+			path = Favorites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,7 +123,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					5AC545362B7974DB00908AD0 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AC5453D2B7974DB00908AD0 /* ContentView.swift in Sources */,
+				5AC5454D2B79768300908AD0 /* FavouritesView.swift in Sources */,
+				5A3874602B813CB500F63F15 /* DataManager.swift in Sources */,
+				5AC5453D2B7974DB00908AD0 /* MainTabView.swift in Sources */,
+				5AC5454B2B79766C00908AD0 /* FeedView.swift in Sources */,
 				5AC5453B2B7974DB00908AD0 /* FeedWorldApp.swift in Sources */,
+				5A6E14852B79945600C7EE24 /* FeedCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +213,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -241,6 +274,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -273,8 +307,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -282,9 +317,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = samostroyenko.FeedWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,8 +341,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,9 +351,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = samostroyenko.FeedWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
