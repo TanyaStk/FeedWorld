@@ -51,6 +51,7 @@ struct FavouritesView: View {
             .scrollTargetBehavior(.paging)
             .ignoresSafeArea()
             .onAppear {
+                scrollPositionChanged(for: items.first?.id)
                 player.play()
             }
             .scrollPosition(id: $scrollPosition)

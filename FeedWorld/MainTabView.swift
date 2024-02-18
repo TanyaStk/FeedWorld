@@ -8,7 +8,7 @@ import SwiftUI
 struct MainTabView: View {
     
     @ObservedObject var feedDataManager = FeedDataManager()
-    @ObservedObject var favoritesDataManager = FavoritesDataManager()
+    @ObservedObject var favoritesDataManager = FavouritesDataManager()
     
     @State private var selectedTab = 0
     @State private var showWebView = false
@@ -51,7 +51,7 @@ struct MainTabView: View {
                 .tag(0)
                 
                 FavouritesView(items: feedDataManager.items
-                    .filter { favoritesDataManager.favorites.contains($0.id) }
+                    .filter { favoritesDataManager.favourites.contains($0.id) }
                     .compactMap { item in
                         switch item {
                         case .media(let mediaItem):

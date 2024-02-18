@@ -8,7 +8,7 @@
 import CoreStore
 
 class FavouritesDataManager: ObservableObject {
-    @Published var favorites = [UUID]()
+    @Published var favourites = [UUID]()
     
     private let dataStack: DataStack = {
         let dataStack = DataStack(CoreStoreSchema(
@@ -50,8 +50,8 @@ class FavouritesDataManager: ObservableObject {
 private extension FavouritesDataManager {
     func getAll() {
         do {
-            let favorites = try dataStack.fetchAll(From<FavouriteItem>())
-            self.favorites = favorites.map { $0.id }
+            let favourites = try dataStack.fetchAll(From<FavouriteItem>())
+            self.favourites = favourites.map { $0.id }
         } catch {
             print("Error while fetching image's names")
             return
