@@ -8,7 +8,7 @@ import AVFoundation
 
 struct FeedView: View {
     
-    @EnvironmentObject var favoritesManager: FavoritesDataManager
+    @EnvironmentObject var favoritesManager: FavouritesDataManager
     
     @State private var player = AVPlayer()
     @State private var scrollPosition: UUID?
@@ -26,7 +26,7 @@ struct FeedView: View {
                     case .media(let mediaItem):
                         MediaCellView(mediaItem: mediaItem, 
                                       player: player, 
-                                      isFavorite: favoritesManager.favorites.contains(mediaItem.id))
+                                      isFavorite: favoritesManager.favourites.contains(mediaItem.id))
                         .environmentObject(favoritesManager)
                     case .promo(let promoItem):
                         PromoCellView(showWebView: $showWebView, 

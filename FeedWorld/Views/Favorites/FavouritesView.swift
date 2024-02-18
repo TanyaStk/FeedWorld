@@ -8,7 +8,7 @@ import AVKit
 
 struct FavouritesView: View {
     
-    @EnvironmentObject var favoritesManager: FavoritesDataManager
+    @EnvironmentObject var favoritesManager: FavouritesDataManager
     
     @State private var player = AVPlayer()
     @State private var scrollPosition: UUID?

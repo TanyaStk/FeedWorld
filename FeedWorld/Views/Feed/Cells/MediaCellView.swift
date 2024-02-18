@@ -8,7 +8,7 @@ import AVFoundation
 
 struct MediaCellView: View {
     
-    @EnvironmentObject var favoritesManager: FavoritesDataManager
+    @EnvironmentObject var favoritesManager: FavouritesDataManager
     @Environment(\.safeAreaInsets) private var safeAreaInsets
     
     @State var isFavorite: Bool
