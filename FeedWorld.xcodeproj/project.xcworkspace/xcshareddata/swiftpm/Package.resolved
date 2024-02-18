@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "corestore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/JohnEstropia/CoreStore.git",
+      "state" : {
+        "revision" : "4b6d9a54e75d2c9fd2c3c768f7d4aa3175c09133",
+        "version" : "9.2.0"
+      }
+    }
+  ],
+  "version" : 2
+}

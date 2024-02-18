@@ -1,25 +1,39 @@
 //
-//  FeedCellView.swift
+//  MediaCellView.swift
 //  FeedWorld
 //
 
 import SwiftUI
+import AVFoundation
 
-struct FeedCellView: View {
+struct MediaCellView: View {
     
+    @EnvironmentObject var favoritesManager: FavoritesDataManager
     @Environment(\.safeAreaInsets) private var safeAreaInsets
     
-    let number: Int
+    @State var isFavorite: Bool
+    
+    let mediaItem: MediaItem
+    let player: AVPlayer
+    
+    init(mediaItem: MediaItem,
+         player: AVPlayer,
+         isFavorite: Bool) {
+        self.mediaItem = mediaItem
+        self.player = player
+        self._isFavorite = State(initialValue: isFavorite)
+    }
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .fill(.cyan)
-                .containerRelativeFrame([.horizontal, .vertical])
-                .overlay {
-                    Text("Post \(number)")
-                        .foregroundColor(.white)
-                }
+            switch mediaItem.mediaType {
+            case .image:
+                ImageView(url: mediaItem.mediaUrl)
+                    .containerRelativeFrame([.horizontal, .vertical])
+            case .video:
+                VideoPlayer(player: player)
+                    .containerRelativeFrame([.horizontal, .vertical])
+            }
             
             VStack {
                 Spacer()
@@ -27,25 +41,20 @@ struct FeedCellView: View {
                 HStack(alignment: .bottom) {
                     VStack(alignment: .leading, spacing: 6) {
                         HStack {
-//                            Image(systemName: "person")
-//                                .resizable()
-//                                .scaledToFit()
-//                                .overlay {
-                                    Circle().fill(.gray)
-//                                }
+                            ImageView(url: mediaItem.creator.profileImageUrl)
+                                .clipShape(Circle())
                                 .frame(width: 30, height: 30)
-//                                .foregroundStyle(.white)
                             
-                            Text("Profile name")
+                            Text(mediaItem.creator.name)
                                 .font(.headline)
                                 .foregroundStyle(.white)
                         }
                         
-                        Text("Content name")
+                        Text(mediaItem.title)
                             .font(.subheadline)
                             .foregroundStyle(.white)
                         
-                        Text("17.02.2023")
+                        Text(mediaItem.creationDate.formattedString)
                             .font(.caption)
                             .foregroundStyle(.white)
                     }
@@ -53,17 +62,21 @@ struct FeedCellView: View {
                     
                     VStack(spacing: 24) {
                         Button {
+                            !isFavorite ?
+                            favoritesManager.save(mediaItem.id) :
+                            favoritesManager.delete(mediaItem.id)
                             
+                            isFavorite.toggle()
                         } label: {
-                            Image(systemName: "heart")
+                            Image(systemName: isFavorite ? "heart.fill" : "heart")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 28, height: 28)
-                                .foregroundStyle(.white)
+                                .foregroundStyle(isFavorite ? .red : .white)
                         }
                         
                         Label(title: {
-                            Text("123.4k")
+                            Text("\(mediaItem.viewCount)")
                                 .font(.callout)
                         }, icon: {
                             Image(systemName: "eye")
@@ -79,18 +92,6 @@ struct FeedCellView: View {
             }
             .padding()
         }
-    }
-}
-
-#Preview {
-    FeedCellView(number: 5)
-}
-
-struct VerticalStyle: LabelStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        VStack(spacing: 4) {
-            configuration.icon
-            configuration.title
-        }
+        .background(.clear)
     }
 }

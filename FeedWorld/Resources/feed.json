@@ -1,0 +1,109 @@
+{
+   "items":[
+      {
+         "uuid":"fb515cfa-9c8f-4eff-a4c4-7927d87d2470",
+         "title":"Beautiful Sunset",
+         "media_type":"video",
+         "media_url":"https://static.sleepclub.app/coding_challenge/2A328B54-2C40-4412-A5B2-0E891F48ED22.MP4",
+         "view_count":564233,
+         "creator":{
+            "uuid":"1771416c-f31b-4ab2-a00a-9eeb49246d30",
+            "name":"Awesome Reindeer",
+            "profile_pic":"https://static.sleepclub.app/profile_image/12.jpg"
+         },
+         "created_on":1651343287
+      },
+      {
+         "uuid":"fb515cfa-9c8f-4eff-a4c4-7927d87d2471",
+         "title":"Awesome Landscape",
+         "media_type":"video",
+         "media_url":"https://static.sleepclub.app/coding_challenge/5FF679AF-7FF5-422D-91AD-E05FA5BBB030.MP4",
+         "view_count":564423,
+         "creator":{
+            "uuid":"1771416c-f31b-4ab2-a00a-9eeb49246d31",
+            "name":"Jane Smith",
+            "profile_pic":"https://static.sleepclub.app/profile_image/13.jpg"
+         },
+         "created_on":1651764896
+      },
+      {
+         "uuid":"fb515cfa-9c8f-4eff-a4c4-7927d87d2472",
+         "title":"Beautiful Moon",
+         "media_type":"image",
+         "media_url":"https://static.sleepclub.app/coding_challenge/IMG_057",
+         "view_count":789012,
+         "creator":{
+            "uuid":"e0fbaa74-1a06-4e45-a8c2-dcb9cf97228c",
+            "name":"John Doe",
+            "profile_pic":"https://static.sleepclub.app/profile_image/14.jpg"
+         },
+         "created_on":1651765000
+      },
+      {
+         "uuid":"fb515cfa-9c8f-4eff-a4c4-7927d87d2473",
+         "media_type":"promo",
+         "background_color":"#000033",
+         "title":"Join our comunity",
+         "button_text":"Join now!",
+         "button_url":"https://www.google.com/"
+      },
+      {
+         "uuid":"2d9a482b-2b4c-46c9-9d67-21f83a2563a1",
+         "title":"City Lights",
+         "media_type":"video",
+         "media_url":"https://static.sleepclub.app/coding_challenge/6D5F45FE-D2C8-4647-8E94-4D23061666C8.MP4",
+         "view_count":876543,
+         "creator":{
+            "uuid":"9f82ae82-c05e-4985-85e4-b3f0cb19a794",
+            "name":"Daniel Brown",
+           "profile_pic":"https://static.sleepclub.app/profile_image/32.jpg"
+         },
+         "created_on":1651765200
+      },
+      {
+         "uuid":"ce2b5f65-2b55-4db5-96f1-5057e6d870a3",
+         "title":"Sunrise Horizon",
+         "media_type":"image",
+         "media_url":"https://static.sleepclub.app/coding_challenge/IMG_0574.JPG",
+         "view_count":432109,
+         "creator":{
+            "uuid":"6d214b45-cc6b-4f7d-a82f-99e70d0cf2ae",
+            "name":"Sophia Adams",
+            "profile_pic":"https://static.sleepclub.app/profile_image/18.jpg"
+         },
+         "created_on":1651765300
+      },
+      {
+         "uuid":"f18b33c7-1f91-4d50-b548-072939847017",
+         "title":"Moonlit Ocean",
+         "media_type":"video",
+         "media_url":"https://static.sleepclub.app/coding_challenge/handel.mp4",
+         "view_count":654321,
+         "creator":{
+            "uuid":"23b75c12-84ac-4e5b-a8e7-d0fe1a17e7b8",
+            "name":"David Taylor",
+            "profile_pic":"https://static.sleepclub.app/profile_image/56.jpg"
+         },
+         "created_on":1651765400
+      },
+      {
+         "uuid":"f18b33c7-1f91-4d50-b548-072939847017",
+         "media_type":"unknown_type_ignore_for_now_5",
+         "random_field":"ignore",
+         "created_on":1651765400
+      },
+      {
+         "uuid":"87ae5042-faa0-4c91-94a0-9235d2e6c4bb",
+         "title":"Urban Skyline",
+         "media_type":"image",
+         "media_url":"https://static.sleepclub.app/coding_challenge/sleeping_beauty.png",
+         "view_count":345678,
+         "creator":{
+            "uuid":"b2d09d5a-b53b-4ed4-b52d-0e1d929a7757",
+            "name":"Emma White",
+            "profile_pic":"https://static.sleepclub.app/profile_image/21.jpg"
+         },
+         "created_on":1651765500
+      }
+   ]
+}
